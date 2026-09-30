@@ -1,0 +1,80 @@
+{
+  "commands": [
+    {
+      "phrases": ["হোয়াটসঅ্যাপ খোলো", "whatsapp খোলো"],
+      "match": "contains",
+      "action": {
+        "type": "open_app",
+        "package": "com.whatsapp"
+      },
+      "reply": "জান, WhatsApp খুলছি।"
+    },
+    {
+      "phrases": ["আমার কনট্যাক্ট খোলো", "contacts খোলো", "কনট্যাক্ট দেখাও"],
+      "match": "contains",
+      "action": {
+        "type": "open_app",
+        "package": "com.android.contacts"
+      },
+      "reply": "জান, Contacts খুলছি।"
+    },
+    {
+      "phrases": ["মেসেজ লিখতে সাহায্য করো", "একটা মেসেজ তৈরি করো"],
+      "match": "contains",
+      "action": {
+        "type": "reply"
+      },
+      "reply": "জান, কাকে এবং কী লিখতে চান বলুন। আমি একটি message draft তৈরি করে দেব; Send করার আগে আপনি দেখে নেবেন।"
+    },
+    {
+      "phrases": ["মেসেজ অটোমেশন চালু করো", "message automation দেখাও"],
+      "match": "contains",
+      "action": {
+        "type": "reply"
+      },
+      "reply": "জান, message automation-এর জন্য আগে recipient, message এবং কখন পাঠাতে হবে তা নির্দিষ্ট করুন। আমি শুধু draft বা reminder তৈরি করতে পারি; আপনার অনুমতি ছাড়া message পাঠাব না।"
+    },
+    {
+      "phrases": ["শুভেচ্ছার উত্তর দাও", "ধন্যবাদের smart reply দাও"],
+      "match": "contains",
+      "action": {
+        "type": "reply"
+      },
+      "reply": "জান, smart reply: আপনাকেও ধন্যবাদ। আপনার দিনটি সুন্দর হোক।"
+    },
+    {
+      "phrases": ["আমি পরে ফোন করব এর উত্তর দাও"],
+      "match": "exact",
+      "action": {
+        "type": "reply"
+      },
+      "reply": "জান, smart reply: ঠিক আছে, আপনি সুবিধামতো পরে ফোন করুন।"
+    },
+    {
+      "phrases": ["ব্যস্ত আছি এর উত্তর দাও"],
+      "match": "exact",
+      "action": {
+        "type": "reply"
+      },
+      "reply": "জান, smart reply: আমি এখন একটু ব্যস্ত আছি, পরে আপনার সঙ্গে কথা বলব।"
+    },
+    {
+      "phrases": ["জরুরি যোগাযোগ খোলো"],
+      "match": "exact",
+      "action": {
+        "type": "open_app",
+        "package": "com.android.contacts"
+      },
+      "reply": "জান, Contacts খুলছি। জরুরি call বা message আপনি নিজে review করে করবেন।"
+    },
+    {
+      "phrases": ["WhatsApp privacy settings খোলো"],
+      "match": "contains",
+      "action": {
+        "type": "open_url",
+        "url": "https://faq.whatsapp.com/"
+      },
+      "reply": "জান, WhatsApp help ও privacy information খুলছি।"
+    }
+  ]
+}
